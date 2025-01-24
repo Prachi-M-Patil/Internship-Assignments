@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="image.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>       
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need assistance, please feel free to reach out to us through the contact form below.</p>
+
+        <form action="submit_contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Gift Corner</a></li>
+                <li><a href="#">Become a Seller</a></li>
+                <li><a href="#">©2007-2025 Flipkart.com</a></li>
+            </ul>       
+        </nav>
+    </footer>
+</body>
+</html>

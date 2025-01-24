@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="image.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">My Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>       
+    </nav>
+
+    <!-- Load icon library for search bar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- The form -->
+    <form class="example" action="action_page.php">
+        <input type="text" id="search-bar" placeholder="search product" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <div class="container">
+        <!-- Filter Section -->
+        <aside class="filter-section">
+            <h3>Filter By</h3>
+            <div class="filter-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="laptops">Laptops</option>
+                    <option value="phones">Phones</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="clothes">Clothing</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Price Range:</label>
+                <select id="price">
+                    <option value="all">All</option>
+                    <option value="low">Below $500</option>
+                    <option value="medium">$500 - $1000</option>
+                    <option value="high">Above $1000</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Cart Summary Section -->
+        <aside class="cart-summary">
+            <h3>Cart Summary</h3>
+            <ul id="cart-summary-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p id="cart-summary-total">Total: $0.00</p>
+        </aside>
+    </div>
+
+    <!-- Product Grid -->
+    <main class="product-grid">
+        <div class="product-card" data-category="phones" data-price="899">
+            <img src="phone.jpg" alt="Product 1">
+            <h4>Smartphone X</h4>
+            <p>Category: Phones</p>
+            <p>Price: $899</p>
+            <p>Rating: 4.5</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="laptops" data-price="1200">
+            <img src="download.jpg" alt="Product 2">
+            <h4>Laptop Pro</h4>
+            <p>Category: Laptops</p>
+            <p>Price: $1200</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="phones" data-price="1200">
+            <img src="ph2.jpg" alt="Product 3">
+            <h4>Smartphone ABC</h4>
+            <p>Category: Phones</p>
+            <p>Price: $1200</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="accessories" data-price="1200">
+            <img src="accessories.jpg" alt="Product 4">
+            <h4>Ladies Corner</h4>
+            <p>Category: Accessories</p>
+            <p>Price: $1200</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="clothing" data-price="1200">
+            <img src="clothes.jpg" alt="Product 5">
+            <h4>Fashion</h4>
+            <p>Category: Clothing</p>
+            <p>Price: $1200</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="laptops" data-price="500">
+            <img src="download.jpg" alt="Product 6">
+            <h4>Laptop Pro</h4>
+            <p>Category: Laptops</p>
+            <p>Price: $500</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="laptops" data-price="300">
+            <img src="download.jpg" alt="Product 7">
+            <h4>Laptop Pro</h4>
+            <p>Category: Laptops</p>
+            <p>Price: $300</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="laptops" data-price="902">
+            <img src="download.jpg" alt="Product 8">
+            <h4>Laptop Pro</h4>
+            <p>Category: Laptops</p>
+            <p>Price: $902</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="laptops" data-price="200">
+            <img src="download.jpg" alt="Product 9">
+            <h4>Laptop Pro</h4>
+            <p>Category: Laptops</p>
+            <p>Price: $200</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-category="laptops" data-price="1500">
+            <img src="download.jpg" alt="Product 10">
+            <h4>Laptop Pro</h4>
+            <p>Category: Laptops</p>
+            <p>Price: $1500</p>
+            <p>Rating: 4.8</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+<footer>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Gift Corner</a></li>
+            <li><a href="#">Become a Seller</a></li>
+            <li><a href="#">©2007-2025 Flipkart.com</a></li>
+        </ul>       
+    </nav>
+</footer>
+</html>

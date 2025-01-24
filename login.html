@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Registration and Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="image.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">My Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>       
+    </nav>
+
+    <!-- Load icon library for search bar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <div class="container">
+        <div id="form-container">
+            <h2 id="form-title">Register</h2>
+            <form id="registration-form">
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username" required>
+                
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" name="email" required>
+                
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" required>
+                
+                <button type="submit">Register</button>
+                <p>Already registered? <a href="#" id="switch-to-login">Login here</a></p>
+            </form>
+
+            <form id="login-form" style="display: none;">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                
+                <button type="submit">Login</button>
+                <p>Not registered yet? <a href="#" id="switch-to-register">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+<footer>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Gift Corner</a></li>
+            <li><a href="#">Become a Seller</a></li>
+            <li><a href="#">©2007-2025 Flipkart.com</a></li>
+        </ul>       
+    </nav>
+</footer>
+</html>
