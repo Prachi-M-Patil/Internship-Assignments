@@ -1,0 +1,12 @@
+<p>shopping-cart works!</p>
+<div class="shopping-cart" >
+    <h1>{{ title }}</h1>
+    <ul>
+      <li *ngFor="let item of cartItems$ | async">
+        {{ item.name }} - {{ item.price | currency }}                 quantity: {{item.quantity}}
+        <button (click)="removeFromCart(item.id)">remove item</button>
+      </li>
+    </ul>
+    <button (click)="clearCart()" >clear cart</button>
+  </div>
+  
