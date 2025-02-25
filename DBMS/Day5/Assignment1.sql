@@ -192,6 +192,23 @@ LEFT JOIN
 WHERE 
     b.Booking_ID IS NULL;
 
+--3 Subqueries--
+select id, name, email
+From CustomerTbl
+where id in(
+	select customer_id 
+	from BookingsTbl
+	group by customer_id
+	Having count(Booking_ID)>1
+	);
+
+--subqueries 3.5
+select Room_ID, room_type, pricePerNight
+from RoomsTbl
+where pricePerNight =(
+		Select Max(pricePerNight) from RoomsTbl
+);
+
 
 
 --4 views--
