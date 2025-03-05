@@ -1,70 +1,78 @@
-Assignment: Building a Simple File Management System in Node.js 
-Problem Statement: 
-You have been hired as a backend developer to create a simple File Management System for  
-a company. The system should allow users to: 
-1. Create and write to files. 
-2. Read and display file contents. 
-3. Append data to an existing file. 
-4. Delete files. 
-5. Log all operations performed using the console object. 
-6. Use setTimeout to simulate a delay before reading a file. 
-7. Use setInterval to log system status every 5 seconds. 
-8. Use process to display environment details. 
-Assignment Requirements: 
-1. Use Global Objects 
-o Use __filename and __dirname to display the current file path. 
-o Use the process object to log the current Node.js version, OS platform, and  
-process ID. 
-2. Use Core Modules (fs and path) 
-o Use the fs module to perform file operations (create, write, read, append, and  
-delete). 
-o Use the path module to manipulate file paths dynamically. 
-3. Use Timing Functions 
-o Use setTimeout() to delay reading the file by 3 seconds after writing. 
-o Use setInterval() to log a message every 5 seconds indicating that the system is
-4. Use Buffers 
-o Store file data in a Buffer before writing it to a file.
+Assignment: Employee Leave Management System (ELMS) Using REST API 
+& Layered Architecture (Without Authentication)
+Problem Statement
+Design and implement a Leave Management System for a company where employees can 
+apply for leave, and managers can approve or reject leave requests. The system should be 
+built using Node.js, Express, SQL Server, and a layered architecture.
+Layers in the Application
+1. Controller Layer - Handles API requests and responses.
+2. Service Layer - Implements business logic and validation.
+3. Repository Layer - Handles database operations (CRUD).
+4. Database Layer - Manages SQL Server connection.
+5. Routing Layer - Defines API endpoints.
+Requirements
+The system should support the following operations:
+Employee Features
+✔ Apply for leave (Start Date, End Date, Leave Type, Reason).
+✔ View leave history and current leave status.
+Manager Features
+✔ View pending leave requests.
+✔ Approve or reject leave requests.
+Admin Features
+✔ View reports of all leaves taken by employees.
 
-o Read the file as a buffer and convert it to a string before displaying it.
+API Endpoints
 
-5. Use Modules
+Employee APIs
 
-o Implement the file handling logic inside a separate module (fileManager.js).
+1. POST /leaves - Apply for a new leave.
 
-o Import and use it in app.js using require().
+2. GET /leaves/:employeeId - Get leave history of an employee.
 
-Implementation Steps:
+Manager APIs
 
-1. Create a module (fileManager.js) to handle file operations.
+3. GET /leaves/pending - Get all pending leave requests.
 
-2. Create a main file (app.js) to use the module and execute operations.
+4. PUT /leaves/:leaveId/approve - Approve a leave request.
 
-3. Test the system by creating, writing, reading, and deleting a file.
+5. PUT /leaves/:leaveId/reject - Reject a leave request.
 
-Expected Output (Console Logs):
+Admin APIs
 
-File created successfully.
+6. GET /leaves/report - Get reports of all leaves taken by employees.
 
-File data written successfully.
+Database Schema (SQL Server)
 
-Reading file in 3 seconds...
+Employee Table
 
-(System status logged every 5 seconds)
+id name email role (Employee/Manager/Admin)
 
-File Contents: "Hello, this is a File Management System!"
+Leave Table 
 
-Appending data...
+id employee_id start_date end_date leave_type 
 
-Data appended successfully.
+(Sick/Vacation)
 
-Deleting file...
+status 
 
-File deleted successfully.
+(Pending/Approved/Rejected) reason
 
-Node.js Version: v18.0.0
+Expected Outcome
 
-Platform: win32
+Apply Layered Architecture to separate concerns.
 
-Process ID: 12345
-  
-running.
+Use REST API best practices for request handling.
+
+Store leave requests in SQL Server
+
+Handle errors properly in all layers.
+
+Submission Guidelines
+
+Code should be well-structured using folders:
+
+controllers/, services/, repositories/, routes/, config/.
+
+Include Postman collection for testing APIs.
+
+Provide SQL script for creating tables.
