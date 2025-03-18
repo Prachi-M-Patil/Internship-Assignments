@@ -1,1 +1,0 @@
-# assignments with type ORM
